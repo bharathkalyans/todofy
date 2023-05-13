@@ -1,13 +1,32 @@
+import { useRef } from 'react'
 import './styles.css'
 
-const InputField = () => {
+interface Props {
+    todo: string,
+    setTodo: React.Dispatch<React.SetStateAction<string>>,
+    handleAdd: (e: React.FormEvent<EventTarget>) => void
+}
+
+const InputField: React.FC<Props> = ({ todo, setTodo, handleAdd }) => {
+
+    const inputRef = useRef<HTMLInputElement>(null)
+
     return (
-        <form className="input flex w-10/12 relative items-center">
+        <form className="input flex w-10/12 relative items-center" onSubmit={(e) => {
+            handleAdd(e);
+            inputRef.current?.blur();
+
+        }}>
             <input
+                ref={inputRef}
+                type="text"
+                placeholder="Enter a Todo"
                 className='input__box w-full px-5 py-6 rounded-full text-2xl border-none'
-                type="text" placeholder="Enter a Todo">
-            </input>
-            <button className="input_submit" type="submit">Go</button>
+                value={todo}
+                onChange={(e) => setTodo(e.target.value)}
+            />
+
+            <button className="input_submit" type="submit">GO</button>
         </form>
     )
 }
