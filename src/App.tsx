@@ -1,25 +1,12 @@
 import "./App.css";
+import InputField from "./components/InputField";
 
-function App() {
+const App: React.FC = () => {
 
-  const name = "Bharath";
-
-  let printName: (name: string) => void;
-
-  const greetUser = (name: string) : unknown => {
-    alert(`Hello ${name}`);
-    return;
-  }
   return (
-    <div className="container mx-auto text-lg">
-      <p className="font-bold text-center">Hello Todist, {name}</p>
-      <div className="">
-        {greetUser(name)}
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla voluptas
-        quia, quas labore totam recusandae veritatis magnam enim velit fugit
-        beatae similique? Exercitationem optio modi esse blanditiis nobis.
-        Dolorum, ducimus!
-      </div>
+    <div className="App container flex flex-col items-center mx-auto min-h-screen w-screen">
+      <span className="heading text-3xl my-5 md:text-5xl md:my-8 text-white uppercase  text-center">Todofy</span>
+      <InputField />
     </div>
   );
 }

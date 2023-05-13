@@ -1,0 +1,39 @@
+.input {
+  align-items: center;
+}
+
+.input__box {
+  box-shadow: inset 0 0 5px black;
+  transition: 0.2s;
+}
+
+/* Makes the Outside content go Dark */
+.input__box:focus {
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.input_submit {
+  background-color: #8739f9;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 12px;
+  border-radius: 50px;
+  right: 0px;
+  border: none;
+  font-size: 15px;
+  color: #8739f9;
+  transition: 0.2s all;
+  box-shadow: 0 0 10px black;
+}
+
+.input_submit:hover {
+  background-color: #6105ec;
+  color: white;
+}
+
+.input_submit:active {
+    transform: scale(0.8);
+    box-shadow: 0 0 5px black;
+  }
