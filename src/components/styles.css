@@ -1,3 +1,11 @@
+.container {
+  display: flex;
+  width: 95%;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
 .input {
   align-items: center;
 }
@@ -62,7 +70,7 @@
 
 .todos__heading {
   font-size: 30px;
-  /* text-align: center; */
+  text-align: center;
   color: white;
 }
 

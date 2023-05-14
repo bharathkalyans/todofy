@@ -19,14 +19,12 @@ const App: React.FC = () => {
       }])
       setTodo("");
       console.log(todos);
-
     }
-
   }
 
 
   return (
-    <div className="App container flex flex-col items-center mx-auto min-h-screen w-screen">
+    <div className="App flex flex-col items-center mx-auto min-h-screen w-screen">
       <span className="heading text-3xl my-5 md:text-5xl md:my-8 text-white uppercase  text-center">Todofy</span>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       <TodoList todos={todos} setTodos={setTodos} />

@@ -50,9 +50,9 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }: Props) => {
                     <input ref={inputRef} value={editTodo} onChange={(e) => setEditTodo(e.target.value)} />
                 ) : (
                     todo.isDone ? (
-                        <s className="todos__single--text">{todo.todo}</s>
+                        <s className="todos__single--text overflow-auto">{todo.todo}</s>
                     ) : (
-                        <span className="todos__single--text">{todo.todo}</span>
+                        <span className="todos__single--text overflow-auto">{todo.todo}</span>
                     )
                 )
             }
