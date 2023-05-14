@@ -42,6 +42,7 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  margin-top: 3rem;
   width: 47.5%;
   padding: 15px;
   background-color: rgb(88, 0, 151);
